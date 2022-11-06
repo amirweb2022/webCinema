@@ -1,0 +1,212 @@
+:root {
+  --bgColor: #f9f7f7;
+  --playColor: #ffffff;
+  --bgAccordion: #ffffff;
+  --bgValueAccordion: #e1e1e1;
+  --color: #000000;
+  --bgFooter: #d9d9d9;
+}
+.dark {
+  --bgColor: #1c1a18;
+  --playColor: #ff2929;
+  --bgAccordion: #121212;
+  --bgValueAccordion: #242424;
+  --color: #ffffff;
+  --bgFooter: #121212;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "iran";
+  user-select: none;
+}
+@font-face {
+  font-family: "iran";
+  src: url(../../assets/fonts/iransan.ttf);
+}
+body {
+  background-color: var(--bgColor);
+  transition: all 0.3s;
+}
+.header {
+  width: 100%;
+  height: 80vh;
+  transition: all .5s;
+  background-image: url(../../assets/images/image\ 62.png);
+  background-position: center;
+  background-size: cover;
+}
+.header nav {
+  margin-right: -11.6px;
+  background: rgba(0, 0, 0, 0.62);
+  box-shadow: 0px 1px 9px rgba(80, 78, 78, 0.25);
+}
+@media only screen and (max-width: 767px) {
+  .header {
+    height: 50vh;
+    background-position: left;
+  }
+}
+.bg-shadow {
+  background: linear-gradient(
+      45deg,
+      rgba(0, 0, 0, 0.98) 13.25%,
+      rgba(0, 0, 0, 0) 59.16%
+    ),
+    linear-gradient(300deg, rgba(0, 0, 0, 0.98) 13.25%, rgba(0, 0, 0, 0) 59.16%);
+  position: absolute;
+  top: 0;
+}
+.cursor {
+  cursor: pointer;
+}
+.bg-gray {
+  background: rgba(255, 255, 255, 0.62);
+  box-shadow: 0px 1px 9px rgba(80, 78, 78, 0.25);
+}
+.activeMode {
+  background: rgba(255, 255, 255, 0.62);
+  box-shadow: 0px 1px 9px rgba(80, 78, 78, 0.25);
+  border-radius: 10px;
+  transition: all 0.3s;
+}
+.btnLogin {
+  background: rgba(0, 0, 0, 0.62);
+  box-shadow: 0px 1px 9px rgba(80, 78, 78, 0.25);
+  border-radius: 10px;
+}
+.modal-content {
+  background-color: #1c1a18;
+}
+.text-gray {
+  color: #868686;
+}
+.activeStatus {
+  color: #ffffff;
+}
+.activeStatus::after {
+  content: "";
+  height: 1px;
+  width: 50px;
+  position: absolute;
+  background-color: #ff2929;
+  bottom: 0;
+}
+.modal-body form div input {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #ff2929;
+  font-weight: 400;
+}
+.modal-body form div input::placeholder {
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 400;
+}
+.btn-red {
+  background-color: #ff2929;
+  color: #ffffff;
+  transition: all 0.3s;
+}
+.btn-red:hover {
+  background-color: #e10404;
+  color: #ffffff;
+}
+.text-xs {
+  font-size: 14px;
+}
+.menuMobile {
+  background-color: #1c1a18;
+  box-shadow: 0px 1px 9px rgba(80, 78, 78, 0.25);
+  border-radius: 0px 0px 20px 20px;
+  top: 80px;
+  right: 0;
+  display: none;
+}
+.activeMobileMenu {
+  display: block;
+}
+form {
+  display: none;
+}
+.formStatusActive {
+  display: block;
+}
+.slider {
+  display: none;
+}
+.activeSlide {
+  transition: all 0.5s;
+  display: block;
+}
+.slider img {
+  width: 200px;
+}
+.btn-slider {
+  background: rgba(56, 56, 56, 0.62);
+  box-shadow: 0px 1px 9px rgba(80, 78, 78, 0.25);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+.btn-slider-right {
+  right: 50px;
+}
+.btn-slider-left {
+  left: 50px;
+}
+.text-main-header {
+  width: 50%;
+}
+#btnBuyTiketMainHeader {
+  border: 2px solid #ff2929;
+  color: #ff2929;
+}
+@media only screen and (max-width: 992px) {
+  .header {
+    height: 70vh;
+  }
+  .menuMobile {
+    top: 70px;
+    height: auto;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .menuMobile {
+    top: 54px;
+    height: auto;
+  }
+  .btn-slider-right {
+    right: 35px;
+  }
+  .btn-slider-left {
+    left: 35px;
+  }
+  .text-main-header {
+    width: 100%;
+  }
+  #btnBuySubscriptionMainHeader span,
+  #btnBuyTiketMainHeader span {
+    font-size: 14px;
+  }
+  #btnBuySubscriptionMainHeader svg,
+  #btnBuyTiketMainHeader svg {
+    width: 22px;
+    height: 22px;
+  }
+}
+@media only screen and (max-width: 525px) {
+  .slider img {
+    width: 150px;
+  }
+  .listMobile li a {
+    font-size: 14px;
+  }
+  .btn-slider-right {
+    right: 0;
+  }
+  .btn-slider-left {
+    left: 0;
+  }
+}
