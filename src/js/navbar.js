@@ -1,5 +1,7 @@
 const sun = document.getElementById('sun');
 const moon = document.getElementById('moon');
+const searchBarBtn = document.querySelector('.icon-searchBar');
+const inputSearchBar = document.querySelector('.inputSearchBar');
 const formRegister = document.getElementById("formRegister");
 const formLogin = document.getElementById("formLogin");
 const menuMobile = document.querySelector(".menuMobile");
@@ -42,6 +44,15 @@ function darkMode(element, mode) {
     }
     localStorage.setItem('mode', JSON.stringify(mode))
 }
+// event click for btn search bar
+searchBarBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    if (inputSearchBar.style.display === 'block') {
+        inputSearchBar.style.display = 'none';
+    } else {
+        inputSearchBar.style.display = 'block';
+    }
+})
 // change style form
 function changeStatus(element, status) {
     for (let index = 0; index < element.parentNode.children.length; index++) {

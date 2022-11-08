@@ -7,13 +7,6 @@ let image = [
 ];
 let index = 0;
 
-setInterval(function () {
-    index++;
-    if (index > image.length - 1) {
-        index = 0;
-    }
-    header.style.backgroundImage = image[index];
-}, 5000);
 const backward = () => {
     index--;
     if (index < 0) {
@@ -28,3 +21,18 @@ const forward = () => {
     }
     header.style.backgroundImage = image[index];
 };
+setInterval(function () {
+    index++;
+    if (index > image.length - 1) {
+        index = 0;
+    }
+    header.style.backgroundImage = image[index];
+}, 5000);
+
+// section categoty
+function activeCategory(element) {
+    for (let index = 0; index < element.parentNode.children.length; index++) {
+        element.parentNode.children[index].classList.remove('activeCategory');
+    }
+    element.classList.add('activeCategory');
+}
