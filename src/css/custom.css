@@ -21,6 +21,9 @@
   font-family: "iran";
   user-select: none;
 }
+a {
+  text-decoration: none;
+}
 @font-face {
   font-family: "iran";
   src: url(../../assets/fonts/iransan.ttf);
@@ -41,6 +44,8 @@ body {
   margin-right: -11.6px;
   background: rgba(0, 0, 0, 0.62);
   box-shadow: 0px 1px 9px rgba(80, 78, 78, 0.25);
+  left: 0;
+  z-index: 10;
 }
 @media only screen and (max-width: 767px) {
   .header {
@@ -207,6 +212,43 @@ form {
 .activeCategory svg {
   fill: #ff2929;
 }
+.title-slider-product h3 {
+  color: var(--color);
+}
+.link-slider-product a {
+  color: #ff2929;
+  font-size: 0.9rem;
+}
+.swiper {
+  width: 100%;
+  margin-top: 30px;
+  cursor: grab;
+}
+.swiper-slide {
+  width: 248px;
+  height: 100%;
+}
+.line {
+  height: 1px;
+  background-color: hsl(200, 3%, 62%);
+  margin-bottom: 10px;
+}
+.line-Short {
+  width: 60%;
+}
+.line-tall {
+  width: 80%;
+}
+.overlay {
+  height: 363px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  bottom: 0;
+  display: none;
+}
+.swiper-slide:hover .overlay{
+  display: flex;
+}
 @media only screen and (max-width: 1024px) {
   .icon-searchBar svg {
     width: 20px;
@@ -272,5 +314,8 @@ form {
   }
   .sectionCategory {
     width: 100%;
+  }
+  .title-slider-product h3 {
+    font-size: 1.3rem;
   }
 }

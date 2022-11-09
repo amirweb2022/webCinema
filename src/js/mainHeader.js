@@ -36,3 +36,7 @@ function activeCategory(element) {
     }
     element.classList.add('activeCategory');
 }
+let swiper = new Swiper(".mySwiper", {
+    slidesPerView: "auto",
+    spaceBetween: 17,
+});
