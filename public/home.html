@@ -122,6 +122,74 @@
         </div>
       </div>
     </div>
+    <!-- popup buy subscription -->
+    <div
+      class="modal fade"
+      id="buySubscription"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div
+            class="w-100 d-flex justify-content-center align-items-center"
+          >
+            <h4 class="text-white">خرید اشتراک</h4>
+          </div>
+          <div class="modal-body w-100 mx-auto mt-3">
+            <!-- discount code -->
+            <div class="d-flex justify-content-between justify-content-lg-around flex-column flex-md-row align-items-center w-100">
+              <div class="bg-white discount-code-box ms-2 rounded-4 py-3 px-3 d-flex justify-content-around flex-column flex-md-row align-content-center">
+                <!-- discount link -->
+                <div class="d-flex justify-content-start justify-content-md-between align-items-center gap-2">
+                  <!-- icon discount -->
+                  <span>
+                    <svg width="25" height="25" viewBox="0 0 28 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M11.5 0.5625C9.60152 0.5625 8.0625 2.10152 8.0625 4C8.0625 4.56264 8.19767 5.09371 8.43732 5.5625H4.625C2.38134 5.5625 0.5625 7.38134 0.5625 9.625C0.5625 10.7637 1.03162 11.7928 1.78472 12.5295C1.76658 12.9769 1.77726 13.4089 1.79029 13.9358C1.80065 14.3549 1.8125 14.834 1.8125 15.4286V15.462C1.8125 16.9591 1.81249 18.1284 1.87395 19.0721C1.93636 20.0303 2.06501 20.822 2.35393 21.5528C3.07621 23.3795 4.4673 24.8445 6.23503 25.6116C6.94674 25.9205 7.71635 26.0569 8.63844 26.1228C9.54351 26.1875 10.6633 26.1875 12.0885 26.1875H15.9114C17.3366 26.1875 18.4565 26.1875 19.3616 26.1228C20.2837 26.0569 21.0533 25.9205 21.765 25.6116C23.5327 24.8445 24.9238 23.3795 25.6461 21.5528C25.935 20.822 26.0636 20.0303 26.126 19.0721C26.1875 18.1285 26.1875 16.9592 26.1875 15.4622V15.3924C26.1875 14.0323 26.1875 13.3437 26.1407 12.6006C26.9373 11.8598 27.4375 10.8008 27.4375 9.625C27.4375 7.38134 25.6187 5.5625 23.375 5.5625H19.5627C19.8023 5.09371 19.9375 4.56264 19.9375 4C19.9375 2.10152 18.3985 0.5625 16.5 0.5625C15.515 0.5625 14.6267 0.976807 14 1.64067C13.3733 0.976807 12.485 0.5625 11.5 0.5625ZM11.5 2.4375C12.3629 2.4375 13.0625 3.13706 13.0625 4V5.5625H11.5C10.6371 5.5625 9.9375 4.86294 9.9375 4C9.9375 3.13706 10.6371 2.4375 11.5 2.4375ZM18.0625 4C18.0625 4.86294 17.3629 5.5625 16.5 5.5625H14.9375V4C14.9375 3.13706 15.6371 2.4375 16.5 2.4375C17.3629 2.4375 18.0625 3.13706 18.0625 4ZM2.4375 9.625C2.4375 8.41688 3.41688 7.4375 4.625 7.4375H13.0625V11.8125H4.625C4.14786 11.8125 3.70893 11.6608 3.35013 11.4029C2.79558 11.0042 2.4375 10.3564 2.4375 9.625ZM25.5625 9.625C25.5625 8.41688 24.5831 7.4375 23.375 7.4375H14.9375V11.8125H23.375C23.8436 11.8125 24.2752 11.6662 24.6304 11.4168C25.196 11.0194 25.5625 10.365 25.5625 9.625ZM3.65753 13.5714C3.96782 13.6473 4.29191 13.6875 4.625 13.6875H13.0625L13.0625 24.3125H12.125C10.6555 24.3125 9.60255 24.3119 8.77212 24.2526C7.951 24.1939 7.41828 24.0811 6.98142 23.8916C5.6863 23.3296 4.64397 22.2453 4.09758 20.8633C3.91074 20.3908 3.80152 19.8182 3.74499 18.9502C3.68796 18.0746 3.6875 16.9662 3.6875 15.4286C3.6875 14.6804 3.67341 14.1602 3.66216 13.7446L3.65753 13.5714ZM14.9375 13.6875L14.9375 24.3125H15.875C17.3445 24.3125 18.3974 24.3119 19.2279 24.2526C20.049 24.1939 20.5817 24.0811 21.0186 23.8916C22.3137 23.3296 23.356 22.2453 23.9024 20.8633C24.0893 20.3908 24.1985 19.8182 24.255 18.9502C24.312 18.0746 24.3125 16.9662 24.3125 15.4286C24.3125 14.6029 24.3124 14.0416 24.3034 13.5807C24.005 13.6506 23.6941 13.6875 23.375 13.6875H14.9375Z" fill="black"/>
+                    </svg>
+                  </span>
+                  <!-- text discount link -->
+                  <a href="#" class="text-discount-link">
+                    کد تخفیف/ کد هدیه
+                  </a>
+                </div>
+                <!-- discount input -->
+                <div>
+                  <input type="text" class="discount-input border-0 me-2 text-center" placeholder="کد تخفیف را وارد کنید">
+                </div>
+              </div>
+              <!-- discount-btn -->
+              <div class="discount-btn">
+                <button type="submit" class="btn w-100 bg-white text-black py-md-3 mb-md-2 h-100 mt-2 cursor">اعمال</button>
+              </div>
+            </div>
+            <!-- Buy subscription -->
+            <div class="w-100 h-100 mt-4 bg-danger d-flex justify-content-center align-items-center flex-column">
+              <div class="bg-white w-100 d-flex justify-content-between align-items-center position-relative rounded-3">
+                <!-- section buy subscription icon-->
+                <div class="bg-gray section-buy-subscription-icon">
+                  icon ticket
+                </div>
+                <!-- section buy subscription -->
+                <div class="bg-info section-buy-subscription">
+                  buy subsctipt
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- header -->
     <header class="header position-relative" id="header">
       <div class="container-fluid">
@@ -175,6 +243,7 @@
                       <a
                         class="nav-link dropdown-toggle text-white"
                         href="#"
+                        id="dropdown-toggle"
                         role="button"
                         data-bs-toggle="dropdown"
                         aria-expanded="false"
@@ -332,8 +401,8 @@
                   <button
                     type="button"
                     class="btn btnLogin text-white d-block d-lg-none ms-2 px-2 py-md-2 px-md-3 d-flex justify-content-center align-items-center"
-                    data-bs-toggle=""
-                    data-bs-target=""
+                    data-bs-toggle="modal"
+                    data-bs-target="#buySubscription"
                   >
                     <!--Buy subscription icon -->
                     <span class="ms-0 ms-md-1 px-1 px-md-0"
@@ -494,7 +563,7 @@
                       <img src="../assets/images/image 137.png" alt="" />
                     </div>
                     <!-- slider btn -->
-                    <div class="position-absolute btn-slider btn-slider-right">
+                    <div class="position-absolute btn-slider btn-slider-right" onclick="btnSliderRight()">
                       <span
                         class="h-100 d-flex justify-content-center align-items-center"
                         ><svg
@@ -511,7 +580,169 @@
                         </svg>
                       </span>
                     </div>
-                    <div class="position-absolute btn-slider btn-slider-left">
+                    <div class="position-absolute btn-slider btn-slider-left" onclick="btnSliderLeft()">
+                      <span
+                        class="h-100 d-flex justify-content-center align-items-center"
+                        ><svg
+                          width="9"
+                          height="15"
+                          viewBox="0 0 6 12"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M5.1068 1.90529C5.35196 1.63801 5.35372 1.20271 5.11074 0.93303C4.86775 0.663349 4.47203 0.661407 4.22686 0.928692L2.73125 2.55925C2.16794 3.17336 1.70755 3.67528 1.38104 4.1225C1.04152 4.58755 0.795742 5.05957 0.730087 5.62618C0.701299 5.87462 0.701299 6.12603 0.730087 6.37448C0.795742 6.94108 1.04152 7.41311 1.38104 7.87816C1.70755 8.32537 2.16794 8.82728 2.73124 9.44139L4.22686 11.072C4.47203 11.3392 4.86775 11.3373 5.11074 11.0676C5.35372 10.7979 5.35196 10.3626 5.10679 10.0954L3.63765 8.49366C3.04141 7.84362 2.63241 7.39625 2.35566 7.01718C2.08683 6.64896 1.9946 6.41244 1.97006 6.20062C1.95464 6.06762 1.95464 5.93304 1.97005 5.80003C1.9946 5.58821 2.08683 5.35169 2.35566 4.98347C2.63241 4.60441 3.04141 4.15704 3.63765 3.50699L5.1068 1.90529Z"
+                            fill="white"
+                          />
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- dropdown -->
+            <div class="container parenDropDown position-fixed">
+              <div class="row">
+                <div class="col-12 dropdownMenu">
+                  <!-- menu -->
+                  <div class="d-flex justify-content-between align-items-center w-50">
+                    <ul class="nav flex-column">
+                      <li class="nav-item">
+                        <a
+                          class="nav-link text-white"
+                          aria-current="page"
+                          href="#"
+                          >انیمیشن</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link text-white" href="#">بیوگرافی</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link text-white" href="#">درام</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link text-white" href="#">تاریخی</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link text-white" href="#">جنگی</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link text-white" href="#">اکشن</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link text-white" href="#">ماجراجویی</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link text-white" href="#">فانتزی</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link text-white" href="#">علمی تخیلی</a>
+                      </li>
+                    </ul>
+                    <ul class="nav flex-column">
+                      <li class="nav-item">
+                        <a
+                          class="nav-link text-white"
+                          aria-current="page"
+                          href="#"
+                          >کمدی</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link text-white" href="#">عاشقانه</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link text-white" href="#">وسترن</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link text-white" href="#">وحشت</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link text-white" href="#">جنایی</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link text-white" href="#">رازآلود</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link text-white" href="#">هیجان انگیز</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link text-white" href="#">خانوادگی</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link text-white" href="#">ورزشی</a>
+                      </li>
+                    </ul>
+                    <ul class="nav flex-column">
+                      <li class="nav-item">
+                        <a
+                          class="nav-link text-white"
+                          aria-current="page"
+                          href="#"
+                          >موزیکال</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link text-white" href="#">مستند</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link text-white" href="#">ناک شو</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link text-white" href="#">موسیقی</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link text-white" href="#">فیلم کوتاه</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link text-white" href="#">مذهبی</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link text-white" href="#">ریلیتی شو</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link text-white" href="#">کنسرت</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link text-white" href="#">تئاتر</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="d-flex justify-content-center w-50 align-items-center">
+                    <!-- btn-right -->
+                    <div class="btn-slider btn-slider-right ms-2 cursor" onclick="btnSliderRightDropDwon()">
+                      <span
+                        class="h-100 d-flex justify-content-center align-items-center"
+                        ><svg
+                          width="9"
+                          height="15"
+                          viewBox="0 0 6 12"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M1.77346 0.928692C1.5283 0.661407 1.13257 0.663349 0.889587 0.93303C0.646601 1.20271 0.648366 1.63801 0.89353 1.90529L2.36267 3.50699C2.95892 4.15703 3.36792 4.60441 3.64467 4.98347C3.9135 5.35169 4.00573 5.58821 4.03027 5.80003C4.04568 5.93304 4.04568 6.06762 4.03027 6.20062C4.00573 6.41244 3.9135 6.64896 3.64467 7.01718C3.36792 7.39625 2.95892 7.84362 2.36267 8.49366L0.89353 10.0954C0.648366 10.3626 0.646601 10.7979 0.889587 11.0676C1.13257 11.3373 1.5283 11.3392 1.77346 11.072L3.26907 9.44141C3.83238 8.82729 4.29278 8.32537 4.61928 7.87816C4.95881 7.41311 5.20458 6.94108 5.27024 6.37447C5.29903 6.12603 5.29903 5.87462 5.27024 5.62618C5.20458 5.05957 4.95881 4.58754 4.61928 4.1225C4.29278 3.67528 3.83238 3.17336 3.26907 2.55925L1.77346 0.928692Z"
+                            fill="white"
+                          />
+                        </svg>
+                      </span>
+                    </div>
+                    <!-- content-Slide -->
+                    <div class="sliderDropDown activeSlideDropDown">
+                      <img src="../assets/images/image 120.png" alt="" />
+                    </div>
+                    <!-- content-Slide -->
+                    <div class="sliderDropDown">
+                      <img src="../assets/images/image 136.png" alt="" />
+                    </div>
+                    <!-- content-Slide -->
+                    <div class="sliderDropDown">
+                      <img src="../assets/images/image 137.png" alt="" />
+                    </div>
+                    <!-- btn-left -->
+                    <div class="btn-slider btn-slider-left me-2 cursor" onclick="btnSliderLeftDropDwon()">
                       <span
                         class="h-100 d-flex justify-content-center align-items-center"
                         ><svg
@@ -548,6 +779,8 @@
                   type="button"
                   id="btnBuySubscriptionMainHeader"
                   class="btn btn-red rounded-4 py-md-3 px-4 btn-lg ms-3"
+                  data-bs-toggle="modal"
+                  data-bs-target="#buySubscription"
                 >
                   <span>
                     <svg

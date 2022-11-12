@@ -6,9 +6,10 @@ const formRegister = document.getElementById("formRegister");
 const formLogin = document.getElementById("formLogin");
 const menuMobile = document.querySelector(".menuMobile");
 const openMenu = document.getElementById("open-menu");
-const slider = document.getElementsByClassName('slider')
-const btnSliderRight = document.querySelector('.btn-slider-right');
-const btnSliderLeft = document.querySelector('.btn-slider-left');
+const slider = document.querySelectorAll('.slider')
+const sliderDropDown = document.querySelectorAll('.sliderDropDown');
+const dropdownToggle = document.getElementById('dropdown-toggle');
+const dropdownMenu = document.querySelector('.dropdownMenu');
 let i = 0;
 let n;
 // get mode
@@ -73,29 +74,31 @@ function changeStatus(element, status) {
 openMenu.addEventListener('click', (ev) => {
     menuMobile.classList.toggle('activeMobileMenu');
 })
-
+dropdownToggle.addEventListener('click', () => {
+    dropdownMenu.classList.toggle('activeDropDown');
+})
 // start slider
 function backSlidediNone() {
     for (n = 0; n < slider.length; n++) {
         slider[n].style.display = "none";
     }
 }
-btnSliderRight.addEventListener("click", function () {
+function btnSliderRight() {
     i++;
     if (i > slider.length - 1) {
         i = 0;
     }
     backSlidediNone();
     slider[i].style.display = "block";
-});
-btnSliderLeft.addEventListener("click", function () {
+}
+function btnSliderLeft() {
     i--;
     if (i < 0) {
         i = slider.length - 1;
     }
     backSlidediNone();
     slider[i].style.display = "block";
-});
+}
 setInterval(() => {
     i++;
     if (i > slider.length - 1) {
@@ -103,4 +106,34 @@ setInterval(() => {
     }
     backSlidediNone();
     slider[i].style.display = "block";
+}, 10000);
+// dropDownSlider
+function backSlidediNoneDropDown() {
+    for (n = 0; n < sliderDropDown.length; n++) {
+        sliderDropDown[n].style.display = "none";
+    }
+}
+function btnSliderRightDropDwon() {
+    i++;
+    if (i > sliderDropDown.length - 1) {
+        i = 0;
+    }
+    backSlidediNoneDropDown();
+    sliderDropDown[i].style.display = "block";
+}
+function btnSliderLeftDropDwon() {
+    i--;
+    if (i < 0) {
+        i = sliderDropDown.length - 1;
+    }
+    backSlidediNoneDropDown();
+    sliderDropDown[i].style.display = "block";
+}
+setInterval(() => {
+    i++;
+    if (i > sliderDropDown.length - 1) {
+        i = 0;
+    }
+    backSlidediNoneDropDown();
+    sliderDropDown[i].style.display = "block";
 }, 10000);

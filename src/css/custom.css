@@ -140,7 +140,24 @@ body {
   border-radius: 0px 0px 20px 20px;
   top: 80px;
   right: 0;
+  z-index: 2;
   display: none;
+}
+.dropdownMenu {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1c1a18;
+  box-shadow: 0px 1px 9px rgba(80, 78, 78, 0.25);
+  border-radius: 0px 0px 20px 20px;
+  padding: 20px 0;
+}
+.activeDropDown {
+  display: flex;
+}
+.parenDropDown {
+  top: 80px;
+  z-index: 2;
 }
 .activeMobileMenu {
   display: block;
@@ -151,14 +168,17 @@ form {
 .formStatusActive {
   display: block;
 }
-.slider {
+.slider,
+.sliderDropDown {
   display: none;
 }
-.activeSlide {
+.activeSlide,
+.activeSlideDropDown {
   transition: all 0.5s;
   display: block;
 }
-.slider img {
+.slider img,
+.sliderDropDown img {
   width: 200px;
 }
 .btn-slider {
@@ -246,8 +266,37 @@ form {
   bottom: 0;
   display: none;
 }
-.swiper-slide:hover .overlay{
+.swiper-slide:hover .overlay {
   display: flex;
+}
+.text-discount-link {
+  font-size: 16px;
+  color: #5f5f5f;
+}
+.discount-input {
+  font-size: 14px;
+  outline: none;
+  background-color: #d9d9d9;
+  border-radius: 20px;
+  padding: 10px 0;
+}
+.discount-input::placeholder {
+  color: #a0a0a0;
+  font-size: 14px;
+}
+.section-buy-subscription-icon {
+  width: 15%;
+}
+.section-buy-subscription {
+  width: 85%;
+}
+@media only screen and (min-width: 1024px) {
+  .discount-code-box {
+    width: 75%;
+  }
+  .discount-btn {
+    width: 25%;
+  }
 }
 @media only screen and (max-width: 1024px) {
   .icon-searchBar svg {
@@ -258,8 +307,14 @@ form {
     width: auto;
     max-width: 100px;
   }
+  .discount-code-box {
+    width: 75%;
+  }
+  .discount-btn {
+    width: 25%;
+  }
 }
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 993px) {
   .header {
     height: 70vh;
   }
@@ -269,6 +324,16 @@ form {
   }
   .sectionCategory {
     width: 75%;
+  }
+  .parenDropDown {
+    display: none;
+  }
+  .text-discount-link {
+    font-size: 14px;
+  }
+  .discount-input,
+  .discount-input::placeholder {
+    font-size: 12px;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -294,6 +359,21 @@ form {
     width: 22px;
     height: 22px;
   }
+  .text-discount-link {
+    font-size: 14px;
+  }
+  .discount-input,
+  .discount-input::placeholder {
+    font-size: 14px;
+    margin-top: 5px;
+    width: 100%;
+  }
+  .discount-code-box {
+    width: 100%;
+  }
+  .discount-btn {
+    width: 100%;
+  }
 }
 @media only screen and (max-width: 525px) {
   .slider img {
@@ -317,5 +397,12 @@ form {
   }
   .title-slider-product h3 {
     font-size: 1.3rem;
+  }
+  .text-discount-link {
+    font-size: 12px;
+  }
+  .discount-input,
+  .discount-input::placeholder {
+    font-size: 12px;
   }
 }
