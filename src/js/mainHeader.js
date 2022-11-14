@@ -40,3 +40,7 @@ let swiper = new Swiper(".mySwiper", {
     slidesPerView: "auto",
     spaceBetween: 17,
 });
+let swiperBestMovie = new Swiper(".mySwiper1", {
+    slidesPerView: "auto",
+    spaceBetween: 17,
+});

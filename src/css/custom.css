@@ -197,6 +197,9 @@ form {
 .text-main-header {
   width: 50%;
 }
+.text-main-header h1 {
+  font-weight: bold;
+}
 #btnBuyTiketMainHeader {
   border: 2px solid #ff2929;
   color: #ff2929;
@@ -284,11 +287,101 @@ form {
   color: #a0a0a0;
   font-size: 14px;
 }
+.buy-subscription-parent {
+  height: 80px;
+}
+.section-buy-subscription-icon::after {
+  content: "";
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  background-color: #1c1a18;
+  border-radius: 50%;
+  top: -17px;
+  right: 77px;
+}
+.section-buy-subscription-icon::before {
+  content: "";
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  background-color: #1c1a18;
+  border-radius: 50%;
+  bottom: -17px;
+  right: 77px;
+}
 .section-buy-subscription-icon {
-  width: 15%;
+  width: 12%;
+  border-left: 2px dashed #a4a4a4;
 }
 .section-buy-subscription {
-  width: 85%;
+  width: 88%;
+}
+.title-buy-subscription {
+  font-weight: 600;
+}
+.offer {
+  background-color: #ff2929;
+  font-size: 11px;
+}
+.price {
+  font-size: 12px;
+  color: #6a6a6a;
+  font-weight: 500;
+}
+.text-buy-subscription {
+  color: #ff2929;
+  font-weight: 500;
+}
+.box-best-movie {
+  background: #ffffff;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  width: 185px;
+  height: 449px;
+}
+.box-best-movie img {
+  width: 100%;
+  height: 100%;
+}
+.box-best-movie .overlay-bet-movie-desc , .box-best-movie .playMovie {
+  display: none;
+}
+.activeBoxMovie {
+  width: 715px;
+  background-image: url("../../assets/images/Rectangle\ 56.png"),
+    url("../../assets/images/Rectangle\ 55.png");
+  background-color: transparent;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: all 0.5s;
+}
+.activeBoxMovie img {
+  display: none;
+}
+.activeBoxMovie .overlay-bet-movie-desc , .activeBoxMovie .playMovie{
+  display: flex;
+}
+.overlay-bet-movie-desc {
+  background: rgba(206, 206, 206, 0.7);
+  border-radius: 26px;
+  bottom: 6%;
+  width: 80%;
+  height: 151px;
+  margin-right: 20px;
+}
+.description {
+  text-align: start;
+}
+.footer {
+  background-color: var(--bgFooter);
+}
+.footer h4 {
+  color: var(--color);
+}
+.footer li , .footer a{
+  color: var(--color);
 }
 @media only screen and (min-width: 1024px) {
   .discount-code-box {
@@ -334,6 +427,13 @@ form {
   .discount-input,
   .discount-input::placeholder {
     font-size: 12px;
+  }
+  .section-buy-subscription-icon {
+    width: 20%;
+    border-left: 2px dashed #a4a4a4;
+  }
+  .section-buy-subscription {
+    width: 80%;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -404,5 +504,48 @@ form {
   .discount-input,
   .discount-input::placeholder {
     font-size: 12px;
+  }
+  .section-buy-subscription-icon::after {
+    content: "";
+    position: absolute;
+    top: -17px;
+    right: 77px;
+  }
+  .section-buy-subscription-icon::before {
+    content: "";
+    position: absolute;
+    bottom: -17px;
+    right: 77px;
+  }
+  .title-buy-subscription {
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .section-buy-subscription-icon::after {
+    content: "";
+    position: absolute;
+    top: -17px;
+    right: 60px;
+  }
+  .section-buy-subscription-icon::before {
+    content: "";
+    position: absolute;
+    bottom: -17px;
+    right: 60px;
+  }
+}
+@media only screen and (max-width: 376px) {
+  .section-buy-subscription-icon::after {
+    content: "";
+    position: absolute;
+    top: -17px;
+    right: 50px;
+  }
+  .section-buy-subscription-icon::before {
+    content: "";
+    position: absolute;
+    bottom: -17px;
+    right: 50px;
   }
 }
