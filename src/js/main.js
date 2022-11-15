@@ -22,3 +22,7 @@ function bestMovieChangeStyle(element, movie) {
             break;
     }
 }
+let swiperBestMovie = new Swiper(".mySwiper1", {
+    slidesPerView: "auto",
+    spaceBetween: 17,
+});
