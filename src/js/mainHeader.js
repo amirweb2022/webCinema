@@ -6,7 +6,6 @@ let image = [
     "url('../../assets/images/image 131.png')"
 ];
 let index = 0;
-
 const backward = () => {
     index--;
     if (index < 0) {
